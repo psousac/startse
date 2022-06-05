@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Quicksand:wght@300;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+  font-family: poppins;
+}
+
+a{
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#presentation{
+  background-image: url(https://img.freepik.com/vetores-gratis/plano-de-fundo-colorido-fluxo-dinamico_52683-42964.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+
+}
+
+#presentation h1{
+  display: block;
+  width: fit-content;
+  font-size: 30px;
+  position: relative;
+  color: black;
+  animation: text_reveal 0.4 ease;
+  animation-delay: 1.5s;
+  background-color: orange;
+ 
+  }
+
+#presentation h1 :nth-child(1)span {
+  animation-delay: 1s;
+} 
+  
+.cta{
+display: inline-block;
+color: orange;
+padding: 6px;
+border-bottom: 2px;
+font-size: 40px;
+border-style: solid;
+text-transform: uppercase;
+letter-spacing: .1rem;
+margin-top: 20px;
+}
+.cta:hover{
+ color: black;
+ font-weight: 700;
+ background-color: orange;
+}
+
+#presentation h1 span{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+
+}
+#presentation ::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: -1;
+  }
+
+#portfolio .portfolio{
+flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 0px;
+}
+
+#portfolio .portfolio-header h1{
+margin-bottom: 50px;
+
+  }
+
+
+#portifolio .all-projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+
+#portfolio .project-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, orange 0%, #f76f00 100%);
+    border-radius: 30px;
+    color: black;
+}
+
+#portfolio .project-info h1{
+  font-size: 10rem;
+  font-weight: 700;
+  color: black;
+}
+
+#portfolio .project-info h2{
+  font-size: 5px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: black;
+  
+}
+
+#portfolio .project-item p{
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+#portfolio .portfolio{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#portfolio .portfolio-header h1{
+  margin-bottom: 50px;
+}
+#portfolio .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#portfolio .project-item{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#portfolio .project-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, orange 0%, #f59f00 100%);
+  color: white;
+}
+
+#portfolio .project-info h1{
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+#portfolio .project-info h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#portfolio .project-img {
+  display: inline;
+  margin-top: 50px;
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+}
+
+#portfolio .project-img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.7;
+}
+#portfolio .project-img img{
+  transition: 0.5s ease transform;
+}
+#portfolio .project-item:hover .project-img img{
+  transform: scale(1.1);
+}
+
+
+@keyframes text_reveal{
+  100%{
+    color: white;
+  }
+}text reveal 
+
+@keyframes text_reveal_box{
+  50%{
+    width:100%;
+    left:0%;
+}
+100%{
+    width: 0%;
+    left:100%;
+}
+}
+ 
